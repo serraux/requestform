@@ -12,18 +12,41 @@
     <title>Request Form</title>
 
 
+    <script>
+      $().ready(function () {
+           $("#requestform").validate({
+           
+           // In 'rules' user have to specify all the 
+           // constraints for respective fields
+           rules: {
+             empName: "required",
+             empLastName: "required",
+             empEmail: {
+                   required: true,
+                   email: true
+               },
+               chksign: "required"
+           },
+           // In 'messages' user have to specify message as per rules
+           messages: {
+             empName: " Please enter your firstname",
+             empLastName: " Please enter your lastname",
+             empEmail: "Please enter a valid email address",
+             chksign: "Please accept our electronic acknowledge"
+           }
+           });
+         });
+         </script>
+
+
 </head>
 <style>
+  /* CSS Style */
 body {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
     font-family: fontawesome; 
 }
-h2, h3,p {
-  
-    text-align: center;
-
-   
-} 
+h2, h3,p {text-align: center;} 
 label{font-weight:100}
 span{font-size: 10px;}
 
@@ -31,31 +54,31 @@ span{font-size: 10px;}
 <body>
     <!--Section Employee leave request  -->
     <div class="container">
-        <form action="form.php" method="post">
+        <form action="" method="post" id="requestform">
         <h3>Employ Leave Request</h3>
         <p>Please submit this form as early as possible</p>
         <p style="margin-bottom : 20px">Please use the comments section to elaborate on anything that needs more detailed information</p>
       
         <div class="row">
             <div class="col-sm-4" >
-                <p class="col-sm-12" style="text-align:left; margin-bottom : 5px; ">Employee name*</p>
-                <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empName" name="empName" >
+                <p class="col-sm-12" style="text-align:left; margin-bottom : 5px; padding-left: 0px; ">Employee name*</p>
+                <div class="form-group col-sm-6"  style="padding-left:0px;">
+                    <input type="text" class="form-control" id="empName" name="empName"  required>
                     <label for="empName">First Name</label>
                 </div>
-                <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empLastName" name="empLastName">
+                <div class="form-group col-sm-6"  style="padding-left:0px;">
+                    <input type="text" class="form-control" id="empLastName" name="empLastName" required>
                     <label for="empLastName">Last Name</label>
                 </div>
             
             </div>
 
-            <div class="col-sm-4" >
+            <div class="col-sm-4" style="padding-left: 0px;">
                 
                <!--  <p>Deparment*</p> -->
                  <div class="form-group col-sm-12">
                     <label for="depList">Deparment*</label>
-                    <select name="deparmentList" id="depList" class="col-sm-12" style="height: 30px">
+                    <select name="deparmentList" id="depList" class="col-sm-12" style="height: 35px; width: 100%;" required>
                       <option value="chooseOne">Choose one</option>
                       <option value="Bussiness">Bussiness</option>
                       <option value="Education">Education</option>
@@ -73,8 +96,8 @@ span{font-size: 10px;}
                 
                
                 <div class="form-group">
-                  <label for="inputEmail">Email* </label> 
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                  <label for="empEmail">Email* </label> 
+                    <input type="email" class="form-control" id="empEmail" placeholder="Enter your email" required >
                    
                 </div>
             
@@ -88,7 +111,7 @@ span{font-size: 10px;}
 
             <div class="col-sm-5" >
 
-                <p style="margin-bottom : 20px; text-align: left">Type of Leave</p>
+                <p style="margin-bottom : 20px; text-align: left">Type of Leave*</p>
 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="chkAnnual">
@@ -156,13 +179,13 @@ span{font-size: 10px;}
 
           <div class="row">
             <div class="col-sm-4" >
-                <p class="col-sm-12" style="text-align:left; margin-bottom:5px;" >Who is the point of contact in your absence*</p>
-                <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empName"  >
+                <p class="col-sm-12" style="text-align:left; margin-bottom:5px;padding-left: 0px;" >Who is the point of contact in your absence*</p>
+                <div class="form-group col-sm-6" style="padding-left: 0px;">
+                    <input type="text" class="form-control" id="empName" required>
                     <label for="empName">First Name</label>
                 </div>
-                <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empLastName" >
+                <div class="form-group col-sm-6" style="padding-left: 0px;">
+                    <input type="text" class="form-control" id="empLastName" required>
                     <label for="empName">Last Name</label>
                 </div>
             
@@ -173,8 +196,8 @@ span{font-size: 10px;}
               
                
                 <div class="form-group">
-                    <label for="pointContactEmail">Email address</label> 
-                    <input type="email" class="form-control" id="pointContactEmail" >
+                    <label for="pointContactEmail">Point of Contact Email*</label> 
+                    <input type="email" class="form-control" id="pointContactEmail" required>
                     
                 </div>
                
@@ -186,8 +209,8 @@ span{font-size: 10px;}
                 
               
                 <div class="form-group">
-                    <label for="pointContactPhone">Point of Contact phone number</label> 
-                    <input type="tel" class="form-control" id="pointContactPhone" >
+                    <label for="pointContactPhone">Point of Contact phone number*</label> 
+                    <input type="tel" class="form-control" id="pointContactPhone" required>
                     
                 </div>
             
@@ -201,7 +224,7 @@ span{font-size: 10px;}
 
                 <p style="text-align:left;">by checking this box, I acnowledge that I am signing this request ellectronically.</p>
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="chksign">
+                    <input type="checkbox" class="form-check-input" id="chksign" required>
                     <label class="form-check-label" for="chksign">electronic signature</label>
                   </div>
 
@@ -225,12 +248,10 @@ span{font-size: 10px;}
 
           </div>
         </form>
+       
     </div><!-- close  <div class="container"> -->
     
-     <?php
-     
-     
-     ?>
+   
       
 
 </body>
