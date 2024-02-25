@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+</head>
+<body>
+    <!--Section Employee leave request  -->
+    <div class="container">
+        <form action="">
+        <h3>Employ Leave Request</h3>
+        <p>Please submit this form as early as possible</p>
+        <p>Please use the comments section to elaborate on anything that needs more detailed information</p>
+      
+        <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">
+                <p class="col-sm-12">Employee name*</p>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="empName"  >
+                    <label for="empName">First Name</label>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="empLastName" >
+                    <label for="empName">Last Name</label>
+                </div>
+            
+            </div>
+
+            <div class="col-sm-4" style="background-color:rgb(115, 115, 220);">
+                
+               <!--  <p>Deparment*</p> -->
+                 <div class="form-group col-sm-12">
+                    <label for="depList">Deparment*</label>
+                    <select name="deparmentList" id="depList" class="col-sm-12" style="height: 30px">
+                      <option value="chooseOne">Choose one</option>
+                      <option value="Bussiness">Bussiness</option>
+                      <option value="Education">Education</option>
+                      <option value="Economics">Economics</option>
+                     
+                    </select>
+                </div>
+
+               
+
+
+            </div>
+            
+            <div class="col-sm-4" style="background-color:rgb(51, 181, 85);">
+                
+                <p >Email*</p>
+                <div class="form-group">
+                    
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                    <label for="inputEmail">Email address</label> 
+                </div>
+            
+            </div>
+
+          </div>
+
+          <!-- Section Leave Information -->
+          <h2>Leave Information</h2>
+          <div class="row">
+
+            <div class="col-sm-5" style="background-color:rgb(165, 226, 181);">
+
+                <p>Type of Leave</p>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkAnnual">
+                    <label class="form-check-label" for="chkAnnual">Annual</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chksick">
+                    <label class="form-check-label" for="chksick">Sick</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkProffesional">
+                    <label class="form-check-label" for="chkProffesional">Professional (upload documentation in fields provided)</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkBereavement">
+                    <label class="form-check-label" for="chkBereavement">Bereavement</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkJuryDuty">
+                    <label class="form-check-label" for="chkJuryDuty">JuryDuty</label>
+                  </div>
+
+
+                  
+            </div>
+
+            <div class="col-sm-7" style="background-color:rgb(166, 193, 227);">
+
+                <p>Edit to a previous leave request</p>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkyes">
+                    <label class="form-check-label" for="chkyes">yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chkno">
+                    <label class="form-check-label" for="chkno">no</label>
+                  </div>
+
+            </div>
+
+
+          </div>
+
+        </form>
+    </div><!-- close  <div class="container"> -->
+    
+     
+     
+
+</body>
+</html>
