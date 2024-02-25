@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Create with love -->
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" integrity="sha512-XJ3ntWHl40opEiE+6dGhfK9NAKOCELrpjiBRQKtu6uJf9Pli8XY+Hikp7rlFzY4ElLSFtzjx9GGgHql7PLSeog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
     <title>Request Form</title>
 
 
@@ -17,12 +16,15 @@
 <style>
 body {
     background-color: rgb(248, 248, 248);
+    font-family: fontawesome; 
 }
 h2, h3,p {
   
     text-align: center;
+
    
 } 
+label{font-weight:100}
 span{font-size: 10px;}
 
 </style>
@@ -36,7 +38,7 @@ span{font-size: 10px;}
       
         <div class="row">
             <div class="col-sm-4" >
-                <p class="col-sm-12">Employee name*</p>
+                <p class="col-sm-12" style="text-align:left; margin-bottom : 5px; ">Employee name*</p>
                 <div class="form-group col-sm-6">
                     <input type="text" class="form-control" id="empName" name="empName" >
                     <label for="empName">First Name</label>
@@ -69,11 +71,11 @@ span{font-size: 10px;}
             
             <div class="col-sm-4" >
                 
-                <p >Email*</p>
+               
                 <div class="form-group">
-                    
+                  <label for="inputEmail">Email* </label> 
                     <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
-                    <label for="inputEmail">Email address</label> 
+                   
                 </div>
             
             </div>
@@ -134,7 +136,7 @@ span{font-size: 10px;}
           <div class="row"  style="margin-top: 20px">
 
             <div class="col-sm-5" >
-                <p>Supporting documentation for professional leave</p>
+                <p  style="margin-top: 20px;  text-align: left;">Supporting documentation for professional leave</p>
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFile" lang="en">
                     <label class="custom-file-label" for="customFile">Choose File</label>
@@ -154,7 +156,7 @@ span{font-size: 10px;}
 
           <div class="row">
             <div class="col-sm-4" >
-                <p class="col-sm-12">Who is the point of contact in your absence*</p>
+                <p class="col-sm-12" style="text-align:left; margin-bottom:5px;" >Who is the point of contact in your absence*</p>
                 <div class="form-group col-sm-6">
                     <input type="text" class="form-control" id="empName"  >
                     <label for="empName">First Name</label>
@@ -197,7 +199,7 @@ span{font-size: 10px;}
 
             <div class="col-sm-6"  >
 
-                <p >by checking this box, I acnowledge that I am signing this request ellectronically.</p>
+                <p style="text-align:left;">by checking this box, I acnowledge that I am signing this request ellectronically.</p>
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="chksign">
                     <label class="form-check-label" for="chksign">electronic signature</label>
