@@ -11,30 +11,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Form</title>
+
+
 </head>
+<style>
+body {
+    background-color: rgb(248, 248, 248);
+}
+h2, h3,p {
+  
+    text-align: center;
+   
+} 
+span{font-size: 10px;}
+
+</style>
 <body>
     <!--Section Employee leave request  -->
     <div class="container">
-        <form action="">
+        <form action="form.php" method="post">
         <h3>Employ Leave Request</h3>
         <p>Please submit this form as early as possible</p>
-        <p>Please use the comments section to elaborate on anything that needs more detailed information</p>
+        <p style="margin-bottom : 20px">Please use the comments section to elaborate on anything that needs more detailed information</p>
       
         <div class="row">
-            <div class="col-sm-4" style="background-color:lavender;">
+            <div class="col-sm-4" >
                 <p class="col-sm-12">Employee name*</p>
                 <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empName"  >
+                    <input type="text" class="form-control" id="empName" name="empName" >
                     <label for="empName">First Name</label>
                 </div>
                 <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" id="empLastName" >
-                    <label for="empName">Last Name</label>
+                    <input type="text" class="form-control" id="empLastName" name="empLastName">
+                    <label for="empLastName">Last Name</label>
                 </div>
             
             </div>
 
-            <div class="col-sm-4" style="background-color:rgb(115, 115, 220);">
+            <div class="col-sm-4" >
                 
                <!--  <p>Deparment*</p> -->
                  <div class="form-group col-sm-12">
@@ -53,7 +67,7 @@
 
             </div>
             
-            <div class="col-sm-4" style="background-color:rgb(51, 181, 85);">
+            <div class="col-sm-4" >
                 
                 <p >Email*</p>
                 <div class="form-group">
@@ -70,9 +84,9 @@
           <h2>Leave Information</h2>
           <div class="row">
 
-            <div class="col-sm-5" style="background-color:rgb(165, 226, 181);">
+            <div class="col-sm-5" >
 
-                <p>Type of Leave</p>
+                <p style="margin-bottom : 20px; text-align: left">Type of Leave</p>
 
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="chkAnnual">
@@ -94,14 +108,15 @@
                     <input type="checkbox" class="form-check-input" id="chkJuryDuty">
                     <label class="form-check-label" for="chkJuryDuty">JuryDuty</label>
                   </div>
+                  <span>Use comments section to list specific times if necessary</span>
 
 
                   
             </div>
 
-            <div class="col-sm-7" style="background-color:rgb(166, 193, 227);">
+            <div class="col-sm-7" >
 
-                <p>Edit to a previous leave request</p>
+                <p  style="margin-bottom : 20px; text-align: left"> Edit to a previous leave request</p>  
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="chkyes">
                     <label class="form-check-label" for="chkyes">yes</label>
@@ -116,11 +131,105 @@
 
           </div>
 
+          <div class="row"  style="margin-top: 20px">
+
+            <div class="col-sm-5" >
+                <p>Supporting documentation for professional leave</p>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile" lang="en">
+                    <label class="custom-file-label" for="customFile">Choose File</label>
+                  </div>
+
+            </div>
+
+            <div class="col-sm-7"  >
+                <label for="comments">Comments:</label>
+                 <textarea class="form-control" id="comments" rows="5"></textarea>
+            </div>
+
+            <!-- Point of Contact Information -->
+          </div>
+          <h2>Point of Contact Information</h2>
+          <p>Who will be in charge in your absence?</p>
+
+          <div class="row">
+            <div class="col-sm-4" >
+                <p class="col-sm-12">Who is the point of contact in your absence*</p>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="empName"  >
+                    <label for="empName">First Name</label>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="empLastName" >
+                    <label for="empName">Last Name</label>
+                </div>
+            
+            </div>
+
+            <div class="col-sm-4" >
+                
+              
+               
+                <div class="form-group">
+                    <label for="pointContactEmail">Email address</label> 
+                    <input type="email" class="form-control" id="pointContactEmail" >
+                    
+                </div>
+               
+
+
+            </div>
+            
+            <div class="col-sm-4" >
+                
+              
+                <div class="form-group">
+                    <label for="pointContactPhone">Point of Contact phone number</label> 
+                    <input type="tel" class="form-control" id="pointContactPhone" >
+                    
+                </div>
+            
+            </div>
+
+          </div>
+          <h2>Electronic Acknowledgement</h2>
+          <div class="row">
+
+            <div class="col-sm-6"  >
+
+                <p >by checking this box, I acnowledge that I am signing this request ellectronically.</p>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="chksign">
+                    <label class="form-check-label" for="chksign">electronic signature</label>
+                  </div>
+
+            </div>
+
+
+          </div>
+          <!-- Submit Request -->
+          <div class="row" style="text-align:center; padding:30px">
+
+            <div class="col-sm-12">
+
+                
+                <div class="form-check">
+                    <input type="submit" value="Submit Request">
+                  
+                  </div>
+
+            </div>
+
+
+          </div>
         </form>
     </div><!-- close  <div class="container"> -->
     
+     <?php
      
      
+     ?>
+      
 
 </body>
 </html>
